@@ -1,0 +1,7 @@
+NOTE: THIS PROGRAM REQUIRES PILLOW LIBRARY,PLEASE INSTALL PIL
+To install PIL:
+open cmd and type -> cd appdata -> cd local -> cd programs -> cd python ->
+cd python[enter the version of your python software] (eg : cd python39 for ver 3.9) ->
+cd scripts -> pip install pillow -> pillow library will be installed
+
+(*if you have a customised location for python please use that file location)
