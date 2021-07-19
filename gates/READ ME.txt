@@ -1,5 +1,0 @@
-NOTE: THIS PROGRAM REQUIRES PILLOW LIBRARY,PLEASE INSTALL PIL
-To install PIL:
-pip install pillow
-
-(*if you have a customised location for python please use that file location)
