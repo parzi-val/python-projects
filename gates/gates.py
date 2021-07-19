@@ -1,12 +1,3 @@
-'''
-NOTE: THIS PROGRAM REQUIRES PILLOW LIBRARY , PLEASE INSTALL PIL
-To install pil:
-open cmd -> cd appdata -> cd local -> cd programs -> cd python ->
-cd python[enter the version of your python software] (eg : cd python39 for ver 3.9) ->
-cd scripts -> pip install pillow -> pillow library will be installed
-if you have a customized location for python please use that file location
-'''
-
 # imports for diff purpose
 import sys
 from sys import stdout
