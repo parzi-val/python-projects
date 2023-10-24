@@ -1,9 +1,11 @@
-from tkinter import *  # noqa: F403
+from tkinter import *
 from tkinter import messagebox
 import pygame
 import random
 
 # snake game ->
+
+status = 0
 
 
 def game():
@@ -41,7 +43,7 @@ def game():
             pygame.draw.rect(display, green, [x[0], x[1], block, block])
 
     def gameloop():
-
+        status = 0
         x1 = display_width / 2
         y1 = display_height / 2
 
@@ -76,18 +78,22 @@ def game():
                     root.deiconify()
                 if event.type == pygame.KEYDOWN:
 
-                    if event.key == pygame.K_LEFT or event.key == pygame.K_a:
+                    if event.key == pygame.K_LEFT and status != 1:
                         x1_change = -10
                         y1_change = 0
-                    elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
+                        status = -1
+                    elif event.key == pygame.K_RIGHT and status != -1:
                         x1_change = 10
                         y1_change = 0
-                    elif event.key == pygame.K_UP or event.key == pygame.K_w:
+                        status = 1
+                    elif event.key == pygame.K_UP and status != -2:
                         y1_change = -10
                         x1_change = 0
-                    elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
+                        status = 2
+                    elif event.key == pygame.K_DOWN and status != 2:
                         y1_change = 10
                         x1_change = 0
+                        status = -2
             if h is True:
                 if x1 >= display_width:
                     x1 = 0
@@ -183,8 +189,8 @@ frame.place(x=100, y=110)
 
 
 label = Label(root, font=("Courier", 30, "bold"), bg="gray15", fg="white", bd=30)
-label.config(text="python")
-label.place(x=100, y=3)
+label.config(text="Snake")
+label.place(x=117, y=3)
 
 var = DoubleVar()
 
